@@ -1,16 +1,15 @@
-// Import Firebase modules
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 
-// Firebase configuration using Vite environment variables
+// Using your provided Firebase configuration
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
-  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
+  apiKey: "AIzaSyCW9IxjsPg5Q2Guyl3ibAseJ6GFHtEVYhY",
+  authDomain: "tradingschool-fe06d.firebaseapp.com",
+  projectId: "tradingschool-fe06d",
+  storageBucket: "tradingschool-fe06d.firebasestorage.app",
+  messagingSenderId: "750428377169",
+  appId: "1:750428377169:web:f1135fd23f9cefc198a870",
+  measurementId: "G-HWQ0KJRGLJ"
 };
 
 // Initialize Firebase
