@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background: #FAFBFC; /* gray-50 */
+    --color-foreground: #1E293B; /* slate-800 */
+    --color-border: #E2E8F0; /* slate-200 */
+    --color-input: #F8FAFC; /* slate-50 */
+    --color-ring: #1E3A8A; /* blue-800 */
+    
+    /* Card Colors */
+    --color-card: #FFFFFF; /* white */
+    --color-card-foreground: #1E293B; /* slate-800 */
+    --color-popover: #FFFFFF; /* white */
+    --color-popover-foreground: #1E293B; /* slate-800 */
+    
+    /* Muted Colors */
+    --color-muted: #F1F5F9; /* slate-100 */
+    --color-muted-foreground: #64748B; /* slate-500 */
+    
+    /* Primary Colors */
+    --color-primary: #1E3A8A; /* blue-800 */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #059669; /* emerald-600 */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    
+    /* Destructive Colors */
+    --color-destructive: #EF4444; /* red-500 */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Accent Colors */
+    --color-accent: #EA580C; /* orange-600 */
+    --color-accent-foreground: #FFFFFF; /* white */
+    
+    /* Success Colors */
+    --color-success: #10B981; /* emerald-500 */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    /* Warning Colors */
+    --color-warning: #F59E0B; /* amber-500 */
+    --color-warning-foreground: #FFFFFF; /* white */
+    
+    /* Error Colors */
+    --color-error: #EF4444; /* red-500 */
+    --color-error-foreground: #FFFFFF; /* white */
+    
+    /* Surface Colors */
+    --color-surface: #F1F5F9; /* slate-100 */
+    --color-surface-foreground: #1E293B; /* slate-800 */
+    
+    /* Text Colors */
+    --color-text-primary: #1E293B; /* slate-800 */
+    --color-text-secondary: #64748B; /* slate-500 */
+    
+    /* Trust Builder */
+    --color-trust: #0F172A; /* slate-900 */
+    --color-trust-foreground: #FFFFFF; /* white */
+    
+    /* Conversion CTA */
+    --color-conversion: #DC2626; /* red-600 */
+    --color-conversion-foreground: #FFFFFF; /* white */
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+  
+  .font-cta {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+}
+
+@layer components {
+  /* Progressive Mastery Animation */
+  .pathway-animation {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawPath 2.5s ease-out forwards;
+  }
+  
+  @keyframes drawPath {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  /* Achievement Celebration */
+  .achievement-glow {
+    box-shadow: 0 0 20px rgba(5, 150, 105, 0.6);
+    animation: pulse-glow 3s infinite;
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(5, 150, 105, 0.6);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(5, 150, 105, 0.8);
+    }
+  }
+  
+  /* Floating Elements */
+  .float-card {
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .float-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 10px 30px rgba(30, 58, 138, 0.2);
+  }
+  
+  /* Brand Shadows */
+  .brand-shadow {
+    box-shadow: 0 4px 20px rgba(30, 58, 138, 0.1);
+  }
+  
+  .brand-shadow-lg {
+    box-shadow: 0 10px 30px rgba(30, 58, 138, 0.15);
+  }
+  
+  /* Conversion Pulse */
+  .conversion-pulse {
+    animation: conversionPulse 4s infinite;
+  }
+  
+  @keyframes conversionPulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.02);
+    }
+  }
+  
+  /* Educational Depth */
+  .depth-perspective {
+    transform: perspective(1000px) rotateY(15deg);
+    transition: transform 0.3s ease-out;
+  }
+  
+  .depth-perspective:hover {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  
+  /* Progress Visualization */
+  .progress-fill {
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Testimonial Rotation */
+  .testimonial-rotate:nth-child(odd) {
+    transform: rotate(-2deg);
+  }
+  
+  .testimonial-rotate:nth-child(even) {
+    transform: rotate(2deg);
+  }
+  
+  /* Backdrop Blur */
+  .backdrop-blur-brand {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.9);
+  }
+}
+
+@layer utilities {
+  /* Brand Spacing System */
+  .spacing-brand {
+    padding: 1.5rem;
+  }
+  
+  /* Educational Focus */
+  .focus-educational {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+  
+  /* Trust Building */
+  .trust-indicator {
+    border: 1px solid rgba(30, 58, 138, 0.1);
+    border-radius: 8px;
+    background: rgba(30, 58, 138, 0.02);
+  }
+  
+  /* Success Celebration */
+  .success-celebration {
+    background: linear-gradient(135deg, var(--color-success) 0%, var(--color-secondary) 100%);
+    color: var(--color-success-foreground);
+  }
+  
+  /* Gradient Backgrounds */
+  .bg-gradient-trust {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-trust) 100%);
+  }
+  
+  .bg-gradient-growth {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-success) 100%);
+  }
+  
+  .bg-gradient-hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  }
+}
